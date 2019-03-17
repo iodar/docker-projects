@@ -4,5 +4,5 @@
 All my docker projects including docker-compose configurations.
 
 ## Projects
-* [PostgreSQL 11](postgres/README.md)
-* [Wekan Kanban](wekan/README.md)
+* [PostgreSQL 11](docker-compose/postgres/README.md)
+* [Wekan Kanban](docker-compose/wekan/README.md)
