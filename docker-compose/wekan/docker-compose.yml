@@ -1,0 +1,27 @@
+version: "3"
+
+services: 
+  wekan-app:
+    image: quay.io/wekan/wekan:v2.48
+    environment: 
+      MONGO_URL: 'mongo://wekan-db:27017/wekan'
+      ROOT_URL: 'http://localhost:8080'
+    ports: 
+      - "80:8080"
+    networks: 
+      - backend
+  
+  wekan-db:
+    image: mongo:3.4
+    expose: 
+      - 27017
+    networks:
+      - backend
+    volumes: 
+      - wekan-db-data:/data/db
+
+volumes: 
+  wekan-db-data:
+
+networks: 
+  backend:
